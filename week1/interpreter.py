@@ -1,21 +1,21 @@
 def main():
-    math(input("Provide an expression formatted x y z: "))
+    print(math(input("Provide an expression formatted x y z: ")))
 
 def math(expression):
-    x = int(expression.partition(" ")[0])
-    y = expression.partition(" ")[1]
-    z = int(expression.partition(" ")[2])
+    x = float(expression.split()[0])
+    y = expression.split(" ")[1]
+    z = float(expression.split(" ")[2])
 
     match y:
         case "+":
-            return(x + z)
+            return(round(x + z, 1))
         case "-":
-            return(x - z)
+            return(round(x - z, 1))
         case "*":
-            return(x * z)
+            return(round(x * z, 1))
         case "/":
-            return(x / z)
+            return(round(x / z, 1))
         case _:
-            print("Invalid operator")
+            return("Invalid operator")
         
 main()
