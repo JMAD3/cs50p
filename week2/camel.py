@@ -16,5 +16,3 @@ def case():
     return snake
 
 main()
-
-# sherry mcgraw 
